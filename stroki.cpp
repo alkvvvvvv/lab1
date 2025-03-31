@@ -13,7 +13,7 @@ int stroki(const string& s) {
 }
 int main() {
     string str;
-    cout << "Введите строку: ";
+    cout << "Ввеfhдите строку: ";
     getline(cin, str);
     cout << "Количество гласных: " << stroki(str) << endl;
     return 0;
