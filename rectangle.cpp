@@ -1,4 +1,4 @@
-#include <iostream>
+!#include <iostream>
 #include <cmath>      // Для функции sqrt (квадратный корень)
 #include <stdexcept>  // Для исключений
 
@@ -16,7 +16,7 @@ int main() {
 
         // Проверка на отрицательные числа
         if (length < 0 || width < 0) {
-            throw runtime_error("Ошибка: Длина и ширина должны быть неотрицательными!");
+            throw runtime_error("Ошибка!: Длина и ширина должны быть неотрицательными!");
         }
 
         // Вычисления
