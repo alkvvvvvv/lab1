@@ -17,9 +17,11 @@ int main() {
     cin >> side2;
 
     // Проверка на неотрицательные значения
-    if (base1 <= 0 || base2 <= 0 || height <= 0 || side1 <= 0 || side2 <= 0 || height > side1 || height > side2){
-        cout << "Ошибка." << endl;
-        cout << "ooshibkaa." << endl;
+
+    
+
+    if (base1 <= 0 || base2 <= 0 || height <= 0 || side1 <= 0 || side2 <= 0 || height > side1 || height > side2) {
+        cout << "ssshibka." << endl;
         return 1;
     }
 
