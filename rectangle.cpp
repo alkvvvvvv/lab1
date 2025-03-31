@@ -1,21 +1,38 @@
 #include <iostream>
-#include <cmath>
+#include <cmath>      // Для функции sqrt (квадратный корень)
+#include <stdexcept>  // Для исключений
+
 using namespace std;
-double Perimeter(double a, double b) {
-    return 2 * (a + b);
-}
-double Area(double a, double b) {
-    return a * b;
-}
-double Diagonal(double a, double b) {
-    return sqrt(a * a + b * b);
-}
+
 int main() {
-    double a, b;
-    cout << "Введите длину и ширину прямоугольника: ";
-    cin >> a >> b;
-    cout << "Периметр: " << Perimeter(a, b) << endl;
-    cout << "Площадь: " << Area(a, b) << endl;
-    cout << "Диагональ: " << Diagonal(a, b) << endl;
+    double length, width;
+
+    try {
+        cout << "Введите длину прямоугольника: ";
+        cin >> length;
+
+        cout << "Введите ширину прямоугольника: ";
+        cin >> width;
+
+        // Проверка на отрицательные числа
+        if (length < 0 || width < 0) {
+            throw runtime_error("Ошибка: Длина и ширина должны быть неотрицательными!");
+        }
+
+        // Вычисления
+        double perimeter = 2 * (length + width);
+        double area = length * width;
+        double diagonal = sqrt(length * length + width * width);
+
+        // Вывод результатов
+        cout << "Периметр: " << perimeter << endl;
+        cout << "Площадь: " << area << endl;
+        cout << "Диагональ: " << diagonal << endl;
+    } 
+    catch (const exception& e) {
+        cerr << e.what() << endl;
+        return 1;  // Завершаем программу с кодом ошибки
+    }
+
     return 0;
 }
