@@ -13,7 +13,7 @@ bool valid(double a, double b, double c) {
 double perimeter(double a, double b, double c) {
     return a + b + c;
 }
-
+//fffff
 // площадь
 double area(double a, double b, double c) {
     double p = perimeter(a, b, c) / 2.0;
